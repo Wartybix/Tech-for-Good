@@ -13,3 +13,5 @@
 *.dvi
 *.nav
 *.snm
+Slides/presentation.bcf
+Slides/presentation.run.xml

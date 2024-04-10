@@ -1,7 +1,9 @@
 \documentclass{beamer}
-\usetheme{Madrid}
+\usetheme{Darmstadt}
+\usepackage[style=authortitle-ibid,backend=biber]{biblatex}
+\addbibresource{refs.bib}
 
-\title{P[othole]/[igeon] Locator}
+\title{Pothole Reconnaissance Network}
 \subtitle{Tech for Good}
 \author[Smith, Tsaris, Turnbull, Waldock]{H.~Smith \and A.~Tsaris \and L.~Turnbull \and L.~Waldock}
 \institute[5J]{Group 5J}
@@ -9,12 +11,36 @@
 
 \begin{document}
 
+
 \frame{\titlepage}
+
+\begin{frame}{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+\section{The Problem}
 
 \begin{frame}{Introduction}
 
-    This is my text for the introduction. Yay.
+Potholes in the road are a challenge and a danger to many drivers and cyclists.
 
+\begin{itemize}
+    \item They pose a risk to \alert{health} as:
+    \begin{itemize}
+        \item Cars can lose control after driving into them, potentially crashing into other cars, cyclists and pedestrians.
+        \item Cyclists can crash into them, potentially flipping-over and injuring themselves.
+    \end{itemize}
+    \item{They also pose a \alert{financial} risk due to the cost of repair.}
+    \begin{itemize}
+        \item Cars are often damaged after driving over potholes.
+        \item Drivers called out the RAC to 5,153 breakdowns caused by potholes in Q4 2023. \footcite{car-breakdowns}
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{References}
+    \printbibliography
 \end{frame}
 
 \end{document}
