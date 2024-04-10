@@ -9,9 +9,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: presentation.tex
+          root_file: Slides/presentation.tex
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
           name: TFG-Presentation
-          path: presentation.pdf
+          path: Slides/presentation.pdf
