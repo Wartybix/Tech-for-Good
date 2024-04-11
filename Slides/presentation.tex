@@ -11,14 +11,18 @@
 \institute[5J]{Group 5J}
 \date{\today}
 
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
 \begin{document}
 
 
 \frame{\titlepage}
-
-\begin{frame}{Table of Contents}
-    \tableofcontents
-\end{frame}
 
 \section{The Problem}
 
@@ -114,9 +118,19 @@ They pose a risk to \alert{health} as:
 \end{frame}
 
 \begin{frame}{Problems With This}
-    Motorists cannot report potholes \alert{in real time}.
+    Motorists cannot report potholes in real time.
     \begin{itemize}
-        \item It would be unsafe to use this website 
+        \item It would be unsafe and illegal to use these websites \emph{while driving} \footcite{highway-code}.
+        \item Therefore, users must wait until they safely park before they can submit a report.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Problems With This}
+    By the time users can safely access the website(s):
+    \begin{itemize}
+        \item They may have forgotten about the pothole, and likely won't report it.
+        \item Or they may remember the pothole, but cannot recall its exact location (needed in the report).
+        \item Or they may not simply have the time or patience to manually submit a report for every pothole they find on the road.
     \end{itemize}
 \end{frame}
 
