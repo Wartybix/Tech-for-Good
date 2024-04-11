@@ -1,7 +1,9 @@
 \documentclass{beamer}
 \usetheme{Darmstadt}
+\usepackage{graphicx}
 \usepackage[style=authortitle-ibid,backend=biber]{biblatex}
 \addbibresource{refs.bib}
+\graphicspath{ {images/} }
 
 \title{Pothole Reconnaissance Network}
 \subtitle{Tech for Good}
@@ -20,24 +22,62 @@
 
 \section{The Problem}
 
-\begin{frame}{Introduction}
+\begin{frame}{What is a pothole?}
 
+\begin{columns}
+
+\column{0.6\linewidth}
+
+How potholes develop:
+\begin{enumerate}
+    \item Cracks in the road develop from wear-and-tear by vehicles.
+    \item Water seeps into these cracks.
+    \item The water freezes, expanding the cracks --- the pothole is formed.\footnote[frame]{\cite{how-are-potholes-formed}}
+\end{enumerate}
 Potholes in the road are a challenge and a danger to many drivers and cyclists.
 
+\column{0.4\linewidth}
+\begin{figure}
+    \includegraphics[width=3.5cm]{potholes}
+    \caption{Picture of a pothole\footnote[frame]{\cite{pothole-pic}}}
+\end{figure}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Health Risks}
+
+They pose a risk to \alert{health} as:
+
 \begin{itemize}
-    \item They pose a risk to \alert{health} as:
+    \item Cars can lose control after driving into them, potentially crashing into other cars, cyclists and pedestrians.
+    \item Drivers may attempt to swerve around them when it is unsafe to do so.
     \begin{itemize}
-        \item Cars can lose control after driving into them, potentially crashing into other cars, cyclists and pedestrians.
-        \item Cyclists can crash into them, potentially flipping-over and injuring themselves.
+        \item For example, driving close to parked cars, abruptly driving into another lane, etc.
     \end{itemize}
-    \item{They also pose a \alert{financial} risk due to the cost of repair.}
-    \begin{itemize}
-        \item Cars are often damaged after driving over potholes.
-        \item Drivers called out the RAC to 5,153 breakdowns caused by potholes in Q4 2023. \footcite{car-breakdowns}
-    \end{itemize}
+    \item Cyclists can crash into them, potentially flipping-over and injuring themselves.
 \end{itemize}
 
 \end{frame}
+
+\begin{frame}{Financial Risks}
+
+    They also pose a \alert{financial} risk due to the cost of vehicle repair.
+
+    \begin{itemize}
+        \item Cars are often damaged after driving over potholes.
+        \begin{itemize}
+            \item cracks on windscreen
+            \item burst tyres
+            \item damage to suspension
+            \item and more…
+        \end{itemize}
+        \item Drivers called out the RAC to 5,153 breakdowns caused by potholes in Q4 2023 \footcite{car-breakdowns}.
+    \end{itemize}
+
+\end{frame}
+
 
 \begin{frame}{References}
     \printbibliography
