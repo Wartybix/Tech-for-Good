@@ -1,6 +1,6 @@
 \documentclass{beamer}
 \usetheme{Darmstadt}
-\usepackage{graphicx}
+\usepackage{graphicx, caption}
 \usepackage[style=authortitle-ibid,backend=biber]{biblatex}
 \addbibresource{refs.bib}
 \graphicspath{ {images/} }
@@ -146,14 +146,31 @@ They also pose a risk to \alert{health} as:
 
     \begin{itemize}
         \item Compatible vehicles will be programmed to automatically generate a report when a shock on the suspension is detected with force above a certain threshold.
+        \item The car's computer will be the control system for this.
         \item Locations with potholes are likely to trigger this shock-detection far more than smooth parts of the road.
-        \item This report includes the current location and is sent to the local council.
+        \item This report includes the current geolocation and is sent to the local council.
         \item The local council can then receive this location data, and use it to visualize where these `pain points' (i.e., potential potholes) are on a map.
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Use of Car Cameras}
+    \begin{columns}
+        \column{0.6\linewidth}
 
+        \begin{itemize}
+            \item Many newer cars have in-built cameras for security and driver ease of use.
+            \item The front camera --- paired with image recognition --- can be used to scan for potholes in the road.
+            \item A report will be generated and sent when a pothole is detected.
+            \item The front camera can also detect when something is \alert{not} a pothole (more on this later).
+        \end{itemize}
+
+        \column{0.4\linewidth}
+
+        \begin{figure}
+            \includegraphics[width=4.3cm]{front-car-camera.jpg}
+            \caption{Picture of a car front camera in operation\footnote[frame]{\cite{front-camera-picture}}}
+        \end{figure}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Filtering and Geofencing}
