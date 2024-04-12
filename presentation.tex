@@ -80,7 +80,7 @@ They also pose a risk to \alert{health} as:
     \end{itemize}
 
     \begin{alertblock}{Intertwined Problems}
-        All health risks can become \alert{financial} risks!
+        All health risks can become financial risks!
 
         From private healthcare costs to lost wages.
     \end{alertblock}
@@ -161,14 +161,14 @@ They also pose a risk to \alert{health} as:
             \item Many newer cars have in-built cameras for security and driver ease of use.
             \item The front camera --- paired with image recognition --- can be used to scan for potholes in the road.
             \item A report will be generated and sent when a pothole is detected.
-            \item The front camera can also detect when something is \alert{not} a pothole (more on this later).
+            \item The front camera can also detect when something is \alert{not} a pothole (more on this shortly).
         \end{itemize}
 
         \column{0.4\linewidth}
 
         \begin{figure}
             \includegraphics[width=4.3cm]{front-car-camera.jpg}
-            \caption{Picture of a car front camera in operation\footnote[frame]{\cite{front-camera-picture}}}
+            \caption{Picture of a car's front camera in operation\footnote[frame]{\cite{front-camera-picture}}}
         \end{figure}
     \end{columns}
 \end{frame}
@@ -179,8 +179,44 @@ They also pose a risk to \alert{health} as:
     Isn't this redundant?
 \end{frame}
 
-\begin{frame}{Filtering and Geofencing}
+\begin{frame}
+    \begin{columns}
+        \column{0.5\linewidth}
 
+        \begin{block}{Advantages of suspension system}
+            \begin{itemize}
+                \item Can detect potholes visually obscured by snow, puddles, and fords.
+                \item Less prone to error, due to the simpler implementation --- does not rely on `experimental' AI.
+                \item Can be used in a broader variety of cars (ones that don't have front-facing cameras).
+            \end{itemize}
+        \end{block}
+
+        \column{0.5\linewidth}
+
+        \begin{block}{Advantages of front camera}
+            \begin{itemize}
+                \item Can detect potholes even if the car drives over or around them.
+                \item Should (in theory) \alert{only} detect potholes, rather than anything that causes a bump.
+            \end{itemize}
+        \end{block}
+
+    \end{columns}
+
+    \vspace{0.4cm}
+    Using \emph{both} systems allows either system to overcome the limitations of the other!
+\end{frame}
+
+\begin{frame}{Filtering}
+    We want data sent to local councils to be as accurate as possible.
+    \begin{itemize}
+        \item If both the suspension sensors and camera are active, feedback from the camera can reduce false-positives from the suspension sensors.
+        \item It does this by identifying objects that will likely cause a `bump' that are \alert{not} potholes.
+        \begin{description}
+            \item[i.e.] speed bumps, the curb, debris, etc.
+        \end{description}
+        \item The control system can then take this as information that the upcoming shock of the suspension can be ignored.
+        \item \alert{No} report is sent in this case.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Pothole Completion}
