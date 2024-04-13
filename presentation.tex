@@ -1,9 +1,17 @@
 \documentclass{beamer}
 \usetheme{Darmstadt}
-\usepackage{graphicx, caption}
+\usepackage{graphicx, caption, listings, xcolor}
+\usepackage[T1]{fontenc} %Stops attempting to use speech marks in code listings.
 \usepackage[style=authortitle-ibid,backend=biber]{biblatex}
 \addbibresource{refs.bib}
 \graphicspath{ {images/} }
+
+\lstset{
+    columns=fullflexible,
+    basicstyle=\ttfamily,
+    frame=single,
+    breaklines=true,
+}
 
 \title{Pothole Reconnaissance Network}
 \subtitle{Tech for Good}
@@ -157,6 +165,7 @@ They also pose a risk to \alert{health} as:
         \item The local council can then receive this location data, and use it to visualize where these `pain points' (i.e., potential potholes) are on a map.
         \item Potholes with higher reported shock strengths are marked as high-priority, as they are more dangerous.
         \item The location data can be filtered by priority level and road type to better facilitate planning of repairs.
+        \item Each council can only see data relevant to their own geographic area.
     \end{itemize}    
 \end{frame}
 
@@ -234,8 +243,24 @@ They also pose a risk to \alert{health} as:
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Geofencing}
-    As 
+\begin{frame}{Server-Side Filtering}
+    A control layer at the client's side can further reduce false-positives by comparing suspected pothole location data with locations of known obstacles like speed bumps.
+
+    \begin{itemize}
+        \item Locations of speed bumps that match locations of suspected potholes can be removed automatically.
+        \item Useful for:
+        \begin{itemize}
+            \item Reports from cars that have suspension sensors but no front camera.
+            \item When the front camera fails to recognize a speed bump.
+        \end{itemize}
+        \item Downside to \alert{only} using this is that it won't filter out dynamic suspension triggers like hitting the curb or crashes.
+    \end{itemize}
+    
+    \begin{exampleblock}{Example in Python}
+        Assuming each variable is a \lstinline|set| of location data:
+
+        \lstinline[language=Python]|potholes = reports - speed_bumps|
+    \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Pothole Completion}
