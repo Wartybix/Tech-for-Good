@@ -244,7 +244,7 @@ They also pose a risk to \alert{health} as:
 \end{frame}
 
 \begin{frame}{Server-Side Filtering}
-    A control layer at the client's side can further reduce false-positives by comparing suspected pothole location data with locations of known obstacles like speed bumps.
+    A control layer at the server's side can further reduce false-positives by comparing suspected pothole location data with locations of known obstacles like speed bumps.
 
     \begin{itemize}
         \item Locations of speed bumps that match locations of suspected potholes can be removed automatically.
@@ -263,6 +263,34 @@ They also pose a risk to \alert{health} as:
     \end{exampleblock}
 \end{frame}
 
+\begin{frame}{Sat-Nav Integrations}    
+    \begin{itemize}
+        \item The system will integrate with sat-nav systems to warn drivers and cyclists of potholes.
+        \begin{description}
+            \item[i.e.,] Google Maps and Apple Maps 
+        \end{description}
+        \item This prepares the user to slow down in good time.
+        \item In addition to visual prompts, warnings will be communicated through audio prompts.
+        \item This informs the user without them being distracted or taking their eyes off the road.
+        \item Integrating with existing sat-nav systems --- instead of creating a new one --- means that views are not forced on the user (requiring the use of a new sat-nav system for this functionality), empowering user choice as per Beard \& Longstaff's ethical guidelines \footcite{principles-for-good-tech}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sat-Nav Integrations}
+    \begin{columns}
+        \column{0.4\linewidth}
+        \begin{figure}
+            \caption{TODO: Add screenshot of warning}
+        \end{figure}
+
+        \column{0.6\linewidth}
+
+        \begin{exampleblock}{Audio prompt example}
+            ``Caution! Pothole in 30 yards.''
+        \end{exampleblock}
+    \end{columns}
+\end{frame}
+
 \begin{frame}{Pothole Completion}
     \begin{columns}
         \column{0.5\linewidth}
@@ -277,14 +305,9 @@ They also pose a risk to \alert{health} as:
         \begin{itemize}
             \item As repair contractors fill potholes in the road, they or the council can mark them as filled.
             \item This will remove reports of the pothole --- up until the time of its repair --- from the system.
+            \item This also removes warnings of the pothole from users' sat-nav systems.
         \end{itemize}
     \end{columns}
-\end{frame}
-
-\begin{frame}{Sat-Nav Warnings}
-
-
-    TODO: Don't forget to talk about integration with existing map apps too.
 \end{frame}
 
 \section{Ethical Concerns}
