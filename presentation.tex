@@ -73,9 +73,9 @@ They also pose a risk to \alert{health} as:
     \begin{itemize}
         \item Cars can lose control after driving into them, potentially crashing into other cars, cyclists and pedestrians.
         \item Drivers may attempt to swerve around them when it is unsafe to do so.
-        \begin{itemize}
-            \item For example, driving close to parked cars, abruptly driving into another lane, etc.
-        \end{itemize}
+        \begin{description}
+            \item[e.g.] driving close to parked cars, abruptly driving into another lane, etc.
+        \end{description}
         \item Cyclists can crash into them, potentially flipping-over and injuring themselves.
     \end{itemize}
 
@@ -181,17 +181,18 @@ They also pose a risk to \alert{health} as:
 
 \begin{frame}
     \begin{columns}
-        \column{0.5\linewidth}
+        \column{0.55\linewidth}
 
         \begin{block}{Advantages of suspension system}
             \begin{itemize}
                 \item Can detect potholes visually obscured by snow, puddles, and fords.
                 \item Less prone to error, due to the simpler implementation --- does not rely on `experimental' AI.
                 \item Can be used in a broader variety of cars (ones that don't have front-facing cameras).
+                \item Pothole danger can be ranked based on severity of impact.
             \end{itemize}
         \end{block}
 
-        \column{0.5\linewidth}
+        \column{0.45\linewidth}
 
         \begin{block}{Advantages of front camera}
             \begin{itemize}
@@ -219,8 +220,26 @@ They also pose a risk to \alert{health} as:
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Pothole Completion}
+\begin{frame}{Geofencing}
+    
+\end{frame}
 
+\begin{frame}{Pothole Completion}
+    \begin{columns}
+        \column{0.5\linewidth}
+
+        \begin{figure}
+            \includegraphics[width=4.2cm]{mark-as-filled.png}
+            \caption{Mock-up of council-side UI}
+        \end{figure}
+
+        \column{0.5\linewidth}
+
+        \begin{itemize}
+            \item As repair contractors fill potholes in the road, they or the council can mark them as filled.
+            \item This will remove reports of the pothole --- up until the time of its repair --- from the system.
+        \end{itemize}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Sat-Nav Warnings}
