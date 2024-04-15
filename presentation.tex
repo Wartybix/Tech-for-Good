@@ -335,7 +335,27 @@ Requiring the use of vehicles with these modern features may introduce economic 
 \end{frame}
 
 \begin{frame}{Bad Actors}
-    Wow
+    It is important to consider all possible use cases of our system --- especially harmful uses --- as Beard \& Longstaff argues.
+
+    \begin{block}{Beard \& Longstaff's principle of `Responsibility'}
+        ``Failing to imagine alternate uses and their implications is risky and
+        unethical. Doing so can alert us to potentially harmful uses we can safeguard against,
+        or potential benefits we can maximise through good design.''\footnote[frame]{\cite{principles-for-good-tech}}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Bad Actors}
+    A manual reporting system opens the possibility for bad actors to submit false reports to the local council.
+
+    \begin{itemize}
+        \item For example, someone could `spam' reports to the council in a location not even affected by potholes.
+        \item This reduces accuracy of the data.
+        \item It wouldn't be possible to `block' an individual from sending data, either, as reports are designed not to be personally identifiable.
+        \item Consequentially, it means that the council may waste resources sending workers to fix a pothole that doesn't exist.
+        \item This takes resources away from fixing real potholes --- and therefore away from making the roads safer.
+    \end{itemize}
+
+    An automatic-only system makes this unintended use-case much more difficult, thereby improving robustness of the data set.
 \end{frame}
 
 \begin{frame}{Distracting Users}
